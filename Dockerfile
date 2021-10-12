@@ -28,7 +28,7 @@ RUN update-ca-certificates && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
 # Compile PHP Extensions
-    docker-php-ext-install pdo_mysql mbstring zip exif pcntl && \
+    docker-php-ext-install pdo_mysql zip exif pcntl && \
     docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ && \
     docker-php-ext-install gd && \
 # Install Composer
